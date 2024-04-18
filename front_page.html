@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        background: linear-gradient(#222, black);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+      }
+
+      strong {
+        font-weight: bold;
+        /* Establece el peso de la fuente en negrita */
+      }
+
+      .container-0 {
+        position: absolute;
+        top: 0;
+        width: 80%;
+        overflow: hidden;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 3;
+        margin-top: 50px;
+      }
+      .container-2 {
+        margin: 0px 20px;
+        width: 50%;
+        border: 3px solid yellow;
+        border-radius: 2px;
+
+      }
+      .container-3 {
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+      }
+      .container-3 img {
+        width: 40%;
+        height: auto;
+        border: 3px solid yellow;
+        border-radius: 2px;
+      }
+      .container-link {
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Color de fondo del contenedor */
+        padding: 30px 100px;
+        /* Espacio interno */
+        border: 4px solid yellow;
+        /* Borde sólido con color azul */
+        border-radius: 30px;
+        /* Borde redondeado */
+        max-width: 50%;
+        /* Ancho máximo del contenedor */
+        font-size: 30px;
+        color: yellow;
+      }
+      .container-4{
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        margin-right: 20%;
+        height: auto;
+      }
+      .container-text {
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Color de fondo del contenedor */
+        padding: 10px 20px;
+        /* Espacio interno */
+        border: 3px solid yellow;
+        /* Borde sólido con color azul */
+        border-radius: 15px;
+        /* Borde redondeado */
+        max-width: 80%;
+        /* Ancho máximo del contenedor */
+
+      }
+
+      .container-text p {
+        color: white;
+        text-align: justify;
+        /* Alinea el texto a la derecha */
+        text-justify: inter-word;
+        font-size: 22px;
+        /* Tamaño de fuente */
+        line-height: 1.4;
+        /* Altura de línea */
+
+      }
+      .container-5 {
+        display: flex; justify-content: center; align-items: center; width: 50%;
+      }
+
+      @media screen and (max-width: 900px) {
+            .container-link {
+                width: 50px;
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+
+      @media screen and (max-width: 500px) {
+            .container-link {
+              width: 20%;
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+        }
+
+      .star {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: yellow;
+        animation: moveStar 5s ease-in infinite;
+      }
+
+      .star.linear {
+        animation: moveStarLinear 5s linear infinite;
+      }
+
+      .star.ease-in {
+        animation: moveStarEaseIn 5s ease-in infinite;
+      }
+
+      .star.ease {
+        animation: moveStarEase 5s ease infinite;
+      }
+
+      .star.ease-out {
+        animation: moveStarEaseOut 5s ease-out infinite;
+      }
+
+      @keyframes moveStarLinear {
+        0% {
+          transform: translateY(120vh);
+        }
+
+        100% {
+          transform: translateY(-100vh);
+        }
+      }
+
+      @keyframes moveStarEaseIn {
+        0% {
+          transform: translateY(120vh);
+        }
+
+        100% {
+          transform: translateY(-100vh);
+        }
+      }
+
+      @keyframes moveStarEase {
+        0% {
+          transform: translateY(120vh);
+        }
+
+        100% {
+          transform: translateY(-100vh);
+        }
+      }
+
+      @keyframes moveStarEaseOut {
+        0% {
+          transform: translateY(120vh);
+        }
+
+        100% {
+          transform: translateY(-100vh);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-0">
+        <div style="display: flex; width: 90%; margin-top: 50px;">
+          <div class="container-5">
+            <strong><a class="container-link" href="https://store.steampowered.com/app/1986790/Seeking_Light/" target="_blank">See Steam page</a></strong>
+          </div>
+          <div class="container-5">
+            <img src="      https://thegdwc.com/images/teams/6700/6731-1-1662388821.png" alt="" style="width: 40%;">
+          </div>
+        </div>
+      <div class="container-1">
+        <div class="container-2">
+          <a href="https://www.youtube.com/watch?v=VzbTbOKA750" target="_blank"><img src="https://cdn.akamai.steamstatic.com/steam/apps/1986790/capsule_616x353.jpg?t=1684061998" alt="" style="width: 100%; height: auto;" ></a>
+        </div>
+        <div class="container-text container-2">
+          <p><strong>Published on 2022.</strong></p>
+          <p>
+            As a member of the Lucky Dodo I had the pleasure of working with a great team on Seeking Light. I was responsible for the AI in the early stages and later the game flow, save systems,
+            level
+            streaming, UI and VFX. The game is published on Steam and won the GDWC 2022 Hobby Category Award and other nominations.
+            Highlight the "<strong>Event Dialogue System</strong>" used both to explain the story of the game and the interactions between Sunny and the bosses.
+            Other elements I worked on were a system of Teleports and Rest points similar to souls-like, the game saving, the level streaming and at the beginning of the project a bit of AI.
+          </p>
+        </div>
+      </div>
+      <div class="container-1">
+        <div class ="container-3">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1986790/extras/GDWC_2022_Winner_-_Hobby_Category_-_SeekingLight.png?t=1684061998" alt="" >
+        </div>
+        <div class ="container-3">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1986790/extras/GDWC_2022_Hobby_Fan_Choice_Finalist_Badge_SeekingLight.png?t=1684061998" alt="" >
+        </div>
+        <div class ="container-3">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1986790/extras/GDWC_2022_Top10_October_SeekingLight.png?t=1684061998" alt="">
+        </div>
+        <div class ="container-3">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1986790/extras/GDWC_2022-Student_Nominee_Badge_SeekingLight.png?t=1684061998" alt="">
+        </div>
+      </div>
+      <div class="container-1" style="margin-top: 100px;">
+        <div class="container-5" >
+          <iframe  style="border: 3px solid yellow;
+          border-radius: 5px;" width="560" height="370" src="https://www.youtube.com/embed/VzbTbOKA750" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="container-5">
+          <iframe style="border: 3px solid yellow;
+          border-radius: 5px;" width="560" height="370" src="https://www.youtube.com/embed/GdrPkYq2yoc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div style="display: flex; width: 90%; margin-top: 50px; height: 200px;">
+        <div class="container-5">
+          <strong><a class="container-link" href="https://store.steampowered.com/app/1986790/Seeking_Light/" target="_blank">Other projects</a></strong>
+        </div>
+        <div class="container-5">
+          <strong><a class="container-link" href="https://store.steampowered.com/app/1986790/Seeking_Light/" target="_blank">About me</a></strong>
+        </div>
+      </div>
+    </div>
+    <script>
+      for (let i = 0; i < 500; i++) {
+        let star = document.createElement("div");
+        let classname = Math.random();
+        if (classname < 0.25) star.className = "star linear";
+        else if (classname < 0.5) star.className = "star ease-in";
+        else if (classname < 0.75) star.className = "star ease";
+        else star.className = "star ease-out";
+        star.style.left = Math.random() * window.innerWidth + "px";
+        star.style.animationDuration = (Math.random() + 1) * 30 + "s";
+        star.style.opacity = Math.random();
+        document.body.appendChild(star);
+      }
+    </script>
+  </body>
+
+</html>
