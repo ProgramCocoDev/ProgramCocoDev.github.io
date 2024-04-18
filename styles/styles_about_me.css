@@ -58,9 +58,11 @@ strong {
   display: flex;
   max-width: 50%;
   margin: 0 10%;
+
 }
 .container-2 img {
-  width: 200px;
+  width: 105px;
+  height: 138px;
   border: 6px solid cyan;
   border-radius: 50px;
 }
@@ -87,7 +89,7 @@ strong {
 }
 .container-text-2 p {
   color: white;
-  text-align: center;
+  text-align: justify;
   text-justify: inter-word;
   font-size: 18px;
   line-height: 1.4;
