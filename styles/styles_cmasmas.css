@@ -62,7 +62,7 @@ strong {
   padding: 0px 20px;
   border: 2px solid green;
   border-radius: 30px;
-
+  height: fit-content;
 }
 .container-text p {
   color: white;
