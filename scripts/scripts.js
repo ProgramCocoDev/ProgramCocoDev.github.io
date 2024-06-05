@@ -182,6 +182,40 @@ In the game, you play as an adventurer who has wandered into a cave in search of
         </p>          
       </div>`;
       break;
+    case 2:
+      container.innerHTML = `        <div class="container-2">
+      <iframe class="video-2" src="https://www.youtube.com/embed/itfYB5ELd48?si=Bs_XRhS0JXeU8XBm" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+    </div>
+    <div class="container-text">
+      <p>
+      Published on Google play.
+      Olympus was developed by Ivan Ivanov Mandev, Alvaro Soriano and me.
+      In the game, the player has to kill enemies, choose upgrades and descent floors.
+      When player dies, receives coins, and in the shop he/she can buy up to 2 spirit mates using coins or reaching a highscore.
+      </p>
+      <p>
+      The Olympian that appears from a portal to Olympus is kicked out of there to descent mount Olympus from top to bottom bringing himself to Hell to fight Hades. The hero will engage in an adventure where his reactions will be a must to be able to pass the different stages of the Olympus and go deeper in the cave. A lot of funny and exciting people will be there along the way for the hero to talk with and bring him a lot of fortune and help and the contrary, a lot of despair and will try to block his path to Hell.
+      </p>
+      <p>
+      <strong> Features </strong>
+      <ul>
+      <li> Procedural generation of runs and enemies </li>
+      <li> Infinite runs </li>
+      <li> Unity aDS integration </li>
+      <li> Responsive </li>
+      <li> Fast gameplay and good progression </li>
+      </ul>
+      <strong> Mechanics </strong>
+      <ul>
+      <li> Jump </li>
+      <li> Falling acceleration on jump </li>
+      <li> Attack with Quick Time Events (QTE) </li>
+      <li> Shield to protect from falling rocks </li>
+      </ul>
+      </p>          
+    </div>`;
+      break;
   }
 }
 
