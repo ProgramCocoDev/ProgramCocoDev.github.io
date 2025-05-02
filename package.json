@@ -1,0 +1,12 @@
+{
+  "name": "programcocodev.github.io",
+  "version": "1.0.0",
+  "description": "Personal portfolio website",
+  "scripts": {
+    "sass": "sass --watch styles/main.scss:styles/styles.css",
+    "sass:build": "sass styles/main.scss:styles/styles.css --style compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+} 

@@ -1,0 +1,22 @@
+@use "sass:color";
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.btn-0 {
+  @include button-base;
+  background-color: transparent;
+  border: 2px solid $border-color;
+  color: $text-color;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: $hover-color;
+    border-color: $secondary-color;
+    color: $secondary-color;
+  }
+  
+  @include responsive(mobile) {
+    padding: 5px 15px;
+    font-size: 14px;
+  }
+} 

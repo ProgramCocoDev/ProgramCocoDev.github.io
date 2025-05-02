@@ -1,0 +1,116 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.container-0 {
+  @include container-base;
+  padding-top: 25%;
+}
+
+.container-1 {
+  margin-top: 4%;
+  width: 100%;
+  @include flex-center;
+}
+
+.container-2 {
+  @include flex-center;
+  max-width: 50%;
+  margin: 0 20px;
+  
+  img {
+    width: 100%;
+    height: auto;
+    border: 2px solid $border-color;
+    border-radius: $border-radius;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      border-color: $secondary-color;
+    }
+  }
+}
+
+.container-3 {
+  @include flex-center;
+  
+  a {
+    width: 30%;
+    height: auto;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    border: 2px solid $border-color;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      border-color: $secondary-color;
+    }
+  }
+}
+
+.container-5 {
+  @include flex-center;
+  width: 50%;
+  
+  button {
+    font-size: 48px;
+  }
+  
+  iframe {
+    border: 2px solid $border-color;
+    border-radius: $border-radius;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      border-color: $secondary-color;
+    }
+  }
+}
+
+.container-text {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px 20px;
+  border: 2px solid $border-color;
+  border-radius: $border-radius;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-color: $secondary-color;
+  }
+  
+  p {
+    color: $text-color;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: $font-size-large;
+    line-height: 1.4;
+  }
+}
+
+@include responsive(mobile) {
+  .container-0 {
+    padding-top: 30%;
+  }
+  
+  .container-2 {
+    max-width: 100%;
+    margin: 10px;
+  }
+  
+  .container-5 {
+    width: 100%;
+    
+    iframe {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  .container-text p {
+    font-size: $font-size-small;
+  }
+} 

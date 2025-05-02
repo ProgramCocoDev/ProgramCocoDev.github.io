@@ -3,18 +3,17 @@
 
   <head>
     <title>Portfolio_Carlos_Soria</title>
-    <link rel="stylesheet" type="text/css" href="./styles/styles_index.css">
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <div id="top-div">
-      <div id="top-left-div">
-        <button class="btn-0" style="left: 0;" onclick="window.open('./about_me.html','_self')"><strong>About me</strong></button>
-      </div>
-      <div id="top-right-div">
-        <button class="btn-0" onclick="window.open('./unreal_engine.html','_self')"><strong>UE4</strong></button>
-        <button class="btn-0" onclick="window.open('./unity.html','_self')"><strong>UNITY</strong></button>
-        <button class="btn-0" onclick="window.open('./cmasmas.html','_self')"><strong>C/C++</strong></button>
-      </div>
+      <nav class="nav-container">
+        <button class="nav-button" onclick="window.open('./about_me.html','_self')">About me</button>
+        <button class="nav-button" onclick="window.open('./unreal_engine.html','_self')">Unreal Engine</button>
+        <button class="nav-button" onclick="window.open('./unity.html','_self')">Unity</button>
+        <button class="nav-button" onclick="window.open('./cmasmas.html','_self')">C/C++</button>
+      </nav>
     </div>
     <div class="container-0" id="body-container">
       <div class="container-1">

@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as *;
+@use '../layout/footer' as *;
+@use '../abstracts/mixins' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient($background-gradient-start, $background-gradient-end);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+  padding-bottom: $footer-height;
+}
+
+@include responsive(mobile) {
+  main {
+    padding-bottom: $footer-height-mobile;
+  }
+}
+
+strong {
+  font-weight: bold;
+} 
