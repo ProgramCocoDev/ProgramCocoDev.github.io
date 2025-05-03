@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal portfolio website",
   "scripts": {
-    "sass": "sass --watch styles/main.scss:styles/styles.css",
+    "sass": "sass --watch styles/sass/main.scss:styles/styles.css --style expanded",
     "sass:build": "sass styles/main.scss:styles/styles.css --style compressed"
   },
   "devDependencies": {
