@@ -1,16 +1,20 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
+$header-height: 80px;
+
 #top-div {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: transparent;
+  background-color: rgba($primary-color, 0.9);
   z-index: $z-index-header;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: $nav-padding 0;
+  height: $header-height;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {

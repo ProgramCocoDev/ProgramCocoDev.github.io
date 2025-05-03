@@ -1,0 +1,83 @@
+<main class="body-container">
+    <h2 class="section-title">My Projects</h2>
+    
+    <div class="video-player-container">
+        <div class="video-player">
+            <!-- Aquí irá el iframe del video -->
+        </div>
+        <div class="video-description">
+            <h3>Project Title</h3>
+            <p>Project description goes here. This is a placeholder text that will be replaced with actual project information when a video is selected.</p>
+        </div>
+    </div>
+
+    <div class="video-grid">
+        <div class="video-preview" data-video-id="1"></div>
+        <div class="video-preview" data-video-id="2"></div>
+        <div class="video-preview" data-video-id="3"></div>
+        <div class="video-preview" data-video-id="4"></div>
+        <div class="video-preview" data-video-id="5"></div>
+        <div class="video-preview" data-video-id="6"></div>
+    </div>
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const videoPreviews = document.querySelectorAll('.video-preview');
+    const videoPlayerContainer = document.querySelector('.video-player-container');
+    const videoGrid = document.querySelector('.video-grid');
+    const videoPlayer = document.querySelector('.video-player');
+    const videoDescription = document.querySelector('.video-description');
+
+    // Datos de ejemplo para los videos
+    const videoData = {
+        1: {
+            title: "Project 1",
+            description: "Description for project 1. This is a placeholder text that will be replaced with actual project information.",
+            url: "https://www.youtube.com/embed/VIDEO_ID_1"
+        },
+        2: {
+            title: "Project 2",
+            description: "Description for project 2. This is a placeholder text that will be replaced with actual project information.",
+            url: "https://www.youtube.com/embed/VIDEO_ID_2"
+        },
+        // ... puedes añadir más datos para los otros videos
+    };
+
+    videoPreviews.forEach(preview => {
+        preview.addEventListener('click', function() {
+            const videoId = this.getAttribute('data-video-id');
+            const video = videoData[videoId];
+
+            if (video) {
+                // Actualizar el reproductor
+                videoPlayer.innerHTML = `<iframe width="100%" height="100%" src="${video.url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                
+                // Actualizar la descripción
+                videoDescription.querySelector('h3').textContent = video.title;
+                videoDescription.querySelector('p').textContent = video.description;
+
+                // Mostrar el reproductor y desplazar la grilla
+                videoPlayerContainer.classList.add('active');
+                videoGrid.classList.add('shifted');
+
+                // Scroll suave hasta el reproductor
+                videoPlayerContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // Opcional: Añadir botón para cerrar el reproductor
+    const closeButton = document.createElement('button');
+    closeButton.className = 'close-button';
+    closeButton.innerHTML = '×';
+    videoPlayerContainer.appendChild(closeButton);
+
+    closeButton.addEventListener('click', function(e) {
+        e.stopPropagation();
+        videoPlayerContainer.classList.remove('active');
+        videoGrid.classList.remove('shifted');
+        videoPlayer.innerHTML = ''; // Limpiar el iframe
+    });
+});
+</script> 
