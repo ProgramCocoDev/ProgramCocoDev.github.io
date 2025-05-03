@@ -19,13 +19,54 @@
 
     <main class="body-container">
         <h1 class="section-title">My Projects</h1>
+        
+        <div class="video-player-container">
+            <div class="video-player">
+                <!-- Aquí irá el iframe del video -->
+            </div>
+            <div class="video-description">
+                <h3>Project Title</h3>
+                <p>Project description goes here. This is a placeholder text that will be replaced with actual project information when a video is selected.</p>
+            </div>
+        </div>
+
         <div class="video-grid">
-            <div class="video-preview"></div>
-            <div class="video-preview"></div>
-            <div class="video-preview"></div>
-            <div class="video-preview"></div>
-            <div class="video-preview"></div>
-            <div class="video-preview"></div>
+            <div class="video-preview" data-video-id="1" onclick="openVideo(1)">
+                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 1 Preview">
+                <div class="preview-overlay">
+                    <h4>Project 1</h4>
+                </div>
+            </div>
+            <div class="video-preview" data-video-id="2" onclick="openVideo(2)">
+                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 2 Preview">
+                <div class="preview-overlay">
+                    <h4>Project 2</h4>
+                </div>
+            </div>
+            <div class="video-preview" data-video-id="3" onclick="openVideo(3)">
+                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 3 Preview">
+                <div class="preview-overlay">
+                    <h4>Project 3</h4>
+                </div>
+            </div>
+            <div class="video-preview" data-video-id="4" onclick="openVideo(4)">
+                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 4 Preview">
+                <div class="preview-overlay">
+                    <h4>Project 4</h4>
+                </div>
+            </div>
+            <div class="video-preview" data-video-id="5" onclick="openVideo(5)">
+                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 5 Preview">
+                <div class="preview-overlay">
+                    <h4>Project 5</h4>
+                </div>
+            </div>
+            <div class="video-preview" data-video-id="6" onclick="openVideo(6)">
+                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 6 Preview">
+                <div class="preview-overlay">
+                    <h4>Project 6</h4>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -64,6 +105,92 @@
         }
 
         //createStars();
+
+        // Datos de ejemplo para los videos
+        const videoData = {
+            1: {
+                title: "Seeking Light - Gameplay Trailer",
+                description: "Official gameplay trailer for Seeking Light, showcasing the main features and gameplay mechanics.",
+                url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            2: {
+                title: "Unreal Engine Project",
+                description: "A showcase of my work with Unreal Engine, including level design and gameplay mechanics.",
+                url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            3: {
+                title: "Unity Development",
+                description: "Collection of Unity projects demonstrating various game mechanics and systems.",
+                url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            4: {
+                title: "C++ Game Development",
+                description: "Examples of game development using C++ and custom game engines.",
+                url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            5: {
+                title: "Game Design Process",
+                description: "Documentation of my game design process from concept to implementation.",
+                url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            6: {
+                title: "Portfolio Overview",
+                description: "A comprehensive overview of my game development portfolio and skills.",
+                url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            }
+        };
+
+        function openVideo(videoId) {
+            console.log('Opening video:', videoId);
+            
+            const videoPlayerContainer = document.querySelector('.video-player-container');
+            const videoGrid = document.querySelector('.video-grid');
+            const videoPlayer = document.querySelector('.video-player');
+            const videoDescription = document.querySelector('.video-description');
+            
+            const video = videoData[videoId];
+            
+            if (video) {
+                // Primero actualizamos el contenido
+                videoPlayer.innerHTML = `<iframe width="100%" height="100%" src="${video.url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                videoDescription.querySelector('h3').textContent = video.title;
+                videoDescription.querySelector('p').textContent = video.description;
+
+                // Luego mostramos el contenedor y desplazamos la grilla
+                videoPlayerContainer.style.display = 'grid';
+                // Forzamos un reflow para que la transición funcione
+                videoPlayerContainer.offsetHeight;
+                videoPlayerContainer.classList.add('active');
+                videoGrid.classList.add('shifted');
+            }
+        }
+
+        // Añadir botón para cerrar el reproductor
+        document.addEventListener('DOMContentLoaded', function() {
+            const closeButton = document.createElement('button');
+            closeButton.className = 'close-button';
+            closeButton.innerHTML = '×';
+            document.querySelector('.video-player-container').appendChild(closeButton);
+
+            closeButton.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const videoPlayerContainer = document.querySelector('.video-player-container');
+                const videoGrid = document.querySelector('.video-grid');
+                const videoPlayer = document.querySelector('.video-player');
+                
+                // Primero quitamos la clase active para iniciar la transición
+                videoPlayerContainer.classList.remove('active');
+                
+                // Esperamos a que termine la transición antes de ocultar el elemento
+                videoPlayerContainer.addEventListener('transitionend', function handler() {
+                    videoPlayerContainer.style.display = 'none';
+                    videoPlayerContainer.removeEventListener('transitionend', handler);
+                });
+                
+                videoGrid.classList.remove('shifted');
+                videoPlayer.innerHTML = '';
+            });
+        });
     </script>
 </body>
 </html> 
