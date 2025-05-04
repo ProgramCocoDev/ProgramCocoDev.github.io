@@ -10,10 +10,10 @@
 <body>
     <header id="top-div">
         <nav class="nav-container">
-            <button class="nav-button">Unreal Engine</button>
-            <button class="nav-button">Unity</button>
-            <button class="nav-button">C/C++</button>
-            <button class="nav-button">About me</button>
+            <button class="nav-button" data-target="unreal-engine">Unreal Engine</button>
+            <button class="nav-button" data-target="unity">Unity</button>
+            <button class="nav-button" data-target="cmasmas">C/C++</button>
+            <button class="nav-button" data-target="about-me">About me</button>
         </nav>
     </header>
 
@@ -69,7 +69,7 @@
             </div>
         </div>
 
-        <div class="about-section">
+        <div class="about-section" id="about-me">
             <h2 class="about-title">About Me</h2>
             <div class="about-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -200,6 +200,20 @@
                 
                 videoGrid.classList.remove('shifted');
                 videoPlayer.innerHTML = '';
+            });
+
+            // Agregar scroll suave a los botones de navegación
+            document.querySelectorAll('.nav-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const target = this.getAttribute('data-target');
+                    const targetElement = document.getElementById(target);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
             });
         });
     </script>
