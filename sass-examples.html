@@ -21,6 +21,61 @@
     <main>
         <div class="body-container" id="seeking-light">
             <h1 class="section-title">Seeking Light</h1>
+
+            <div class="highlight-content">
+                <div class="highlight-header">
+                    <div class="highlight-badges">
+                        <a href="https://store.steampowered.com/app/1986790/Seeking_Light/" target="_blank" class="highlight-badge">
+                            <i class="fab fa-steam"></i> Steam
+                        </a>
+                        <div class="highlight-badge">
+                            <img src="https://thegdwc.com/images/teams/6700/6731-1-1662388821.png" alt="GDWC 2022 Winner" style="height: 20px; vertical-align: middle;">
+                            GDWC 2022 Winner
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-showcase">
+                    <div class="video-container">
+                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/VzbTbOKA750" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-container">
+                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/GdrPkYq2yoc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <div class="highlight-description">
+                    <p><strong>Published in 2022</strong></p>
+                    <p>As a member of the Lucky Dodo team, I had the pleasure of working with a great team on Seeking Light. The game combines Souls-like mechanics with Metroidvania exploration, and I was responsible for several key systems throughout its development.</p>
+                    
+                    <div class="highlight-features">
+                        <div class="feature-section">
+                            <h4>Core Systems</h4>
+                            <ul>
+                                <li><strong>Event Dialogue System</strong> - Used both to explain the story of the game and the interactions between Sunny and the bosses</li>
+                                <li>Game flow and progression mechanics</li>
+                                <li>Save system implementation</li>
+                                <li>Level streaming optimization</li>
+                                <li>UI/UX design and implementation</li>
+                                <li>Visual effects and particle systems</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feature-section">
+                            <h4>Technical Features</h4>
+                            <ul>
+                                <li>Souls-like teleport and rest point system</li>
+                                <li>AI behavior system (early development)</li>
+                                <li>Level streaming for seamless world exploration</li>
+                                <li>Save system with checkpoint management</li>
+                                <li>Visual effects and environmental interactions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p>The game's success is reflected in its achievements, including winning the GDWC 2022 Hobby Category Award and receiving other nominations. The project is published on Steam and showcases our team's ability to create an engaging gaming experience with innovative systems and polished mechanics.</p>
+                </div>
+            </div>
         </div>
         <div class="body-container" id="unreal-engine">
             <h1 class="section-title">Unreal Engine Projects</h1>
@@ -104,16 +159,40 @@
             </div>
 
             <div class="video-grid">
-                <div class="video-preview" data-video-id="5" onclick="openVideo(5, 'cmasmas')">
-                    <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 5 Preview">
+                <div class="video-preview" data-video-id="7" onclick="openVideo(7, 'cmasmas')">
+                    <img src="https://img.youtube.com/vi/yC0dw6pSiJ0/maxresdefault.jpg" alt="ERONERD ENGINE">
                     <div class="preview-overlay">
-                        <h4>Project 5</h4>
+                        <h4>ERONERD ENGINE</h4>
                     </div>
                 </div>
-                <div class="video-preview" data-video-id="6" onclick="openVideo(6, 'cmasmas')">
-                    <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 6 Preview">
+                <div class="video-preview" data-video-id="8" onclick="openVideo(8, 'cmasmas')">
+                    <img src="https://img.youtube.com/vi/uREyOtJeau0/maxresdefault.jpg" alt="RPG DUNGEON TACTICS">
                     <div class="preview-overlay">
-                        <h4>Project 6</h4>
+                        <h4>RPG DUNGEON TACTICS</h4>
+                    </div>
+                </div>
+                <div class="video-preview" data-video-id="8.5" onclick="openVideo(8.5, 'cmasmas')">
+                    <img src="https://img.youtube.com/vi/-ZxHkM_aDPM/maxresdefault.jpg" alt="RPG DUNGEON TACTICS Extended">
+                    <div class="preview-overlay">
+                        <h4>RPG DUNGEON TACTICS Extended</h4>
+                    </div>
+                </div>
+                <div class="video-preview" data-video-id="9" onclick="openVideo(9, 'cmasmas')">
+                    <img src="https://img.youtube.com/vi/N9ebnEl0SGU/maxresdefault.jpg" alt="PRG PROCEDURAL CITY">
+                    <div class="preview-overlay">
+                        <h4>PRG PROCEDURAL CITY</h4>
+                    </div>
+                </div>
+                <div class="video-preview" data-video-id="10" onclick="openVideo(10, 'cmasmas')">
+                    <img src="https://img.youtube.com/vi/rHRRIPxTkgk/maxresdefault.jpg" alt="L-System">
+                    <div class="preview-overlay">
+                        <h4>L-System</h4>
+                    </div>
+                </div>
+                <div class="video-preview" data-video-id="10.5" onclick="openVideo(10.5, 'cmasmas')">
+                    <img src="https://img.youtube.com/vi/Iaz1yLZLqOc/maxresdefault.jpg" alt="L-System Pattern Generation">
+                    <div class="preview-overlay">
+                        <h4>L-System Pattern Generation</h4>
                     </div>
                 </div>
             </div>
@@ -172,8 +251,8 @@
         const videoData = {
             1: {
                 title: "Seeking Light - Gameplay Trailer",
-                description: "Official gameplay trailer for Seeking Light, showcasing the main features and gameplay mechanics.",
-                url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                description: "Award-winning game developed with Lucky Dodo, featuring innovative gameplay mechanics and engaging narrative systems. Winner of the GDWC 2022 Hobby Category Award.<br><br><strong>Key Contributions</strong><br><ul><li>Event Dialogue System for story delivery</li><li>AI and combat systems</li><li>Game flow and progression</li><li>Save system and level streaming</li><li>UI/UX and VFX implementation</li></ul><br><strong>Achievements</strong><br><ul><li>GDWC 2022 Hobby Category Winner</li><li>Published on Steam</li><li>Multiple award nominations</li></ul>",
+                url: "https://www.youtube.com/embed/VzbTbOKA750",
                 references: [
                     {
                         text: "Steam Page",
@@ -221,6 +300,36 @@
                 title: "Olympus",
                 description: "Mobile game published on Google Play, developed in collaboration with Ivan Ivanov Mandev and Alvaro Soriano. A roguelike action game where players descend through Mount Olympus, battling enemies and collecting upgrades.<br><br><strong>Key Features</strong><ul><li>Procedural level and enemy generation</li><li>Infinite progression system</li><li>Unity Ads integration</li><li>Responsive controls</li><li>Fast-paced combat</li></ul><br><strong>Core Mechanics</strong><ul><li>Precise jump physics with acceleration</li><li>Quick Time Event combat system</li><li>Defensive shield mechanics</li><li>Resource management</li></ul>",
                 url: "https://www.youtube.com/embed/itfYB5ELd48?si=Bs_XRhS0JXeU8XBm"
+            },
+            7: {
+                title: "ERONERD ENGINE",
+                description: "Advanced graphics engine built using OpenGL 4.6, featuring:<br><br><strong>Core Features</strong><br><ul><li>Multithreaded architecture with separate logic and rendering threads</li><li>ECS (Entity Component System) with efficient component management</li><li>Scene Graph implementation using unordered maps</li><li>Advanced framebuffer system for RTT and post-processing</li></ul><br><br><strong>Technical Highlights</strong><br><ul><li>4-directional light shadow system</li><li>Comprehensive post-processing pipeline including:<br><ul><li>Inverted colors</li><li>Greyscale</li><li>Kernel effects</li><li>Blur</li><li>Edge detection</li><li>Silhouette rendering</li><li>Wireframe mode with geometry offset</li><li>Pixelation effects</li></ul></li></ul>",
+                url: "https://www.youtube.com/embed/yC0dw6pSiJ0"
+            },
+            8: {
+                title: "RPG DUNGEON TACTICS",
+                description: "Turn-based RPG developed using SDL, ImGUI, and SQLite. Features include:<br><br><strong>Gameplay</strong><br><ul><li>Control of melee, ranged, and magic units</li><li>Strategic turn-based combat system</li><li>Random dungeon generation algorithm</li><li>Complex room connection system</li></ul><br><br><strong>Technical Implementation</strong><br><ul><li>Custom base classes for game development</li><li>Advanced combat logic and character movement</li><li>Procedural dungeon generation with intelligent room placement</li></ul>",
+                url: "https://www.youtube.com/embed/uREyOtJeau0"
+            },
+            8.5: {
+                title: "RPG DUNGEON TACTICS - Extended Gameplay",
+                description: "Extended gameplay showcase of the turn-based RPG, featuring:<br><br><strong>Combat System</strong><br><ul><li>Detailed combat mechanics demonstration</li><li>Unit abilities and special attacks</li><li>Strategic positioning and movement</li><li>Enemy AI behavior patterns</li></ul><br><br><strong>Dungeon Features</strong><br><ul><li>Complex room layouts and connections</li><li>Environmental interactions</li><li>Resource management</li><li>Character progression system</li></ul>",
+                url: "https://www.youtube.com/embed/-ZxHkM_aDPM"
+            },
+            9: {
+                title: "PRG PROCEDURAL CITY",
+                description: "First foray into graphics engine programming, featuring:<br><br><strong>Core Features</strong><br><ul><li>Custom OpenGL layer implementation</li><li>Advanced lighting system (directional, spot, and point lights)</li><li>Fog effects and frustum culling</li><li>Multiple render mesh modes</li><li>Dynamic camera system</li></ul><br><br><strong>Additional Features</strong><br><ul><li>ImGui integration for real-time control</li><li>Object loader for buildings and roads</li><li>Procedural city generation algorithm</li></ul>",
+                url: "https://www.youtube.com/embed/N9ebnEl0SGU"
+            },
+            10: {
+                title: "L-System",
+                description: "Implementation of Lindenmayer's system (L-System), a formal grammar used to model plant growth and organism morphology. Features include:<br><br><strong>Key Features</strong><br><ul><li>Reproduction of existing L-System rules</li><li>Custom rule creation system</li><li>Pattern generation capabilities</li><li>Interactive rule modification</li></ul>",
+                url: "https://www.youtube.com/embed/rHRRIPxTkgk"
+            },
+            10.5: {
+                title: "L-System - Pattern Generation",
+                description: "Extended demonstration of the L-System implementation, showcasing:<br><br><strong>Pattern Generation</strong><br><ul><li>Complex plant growth simulations</li><li>Fractal pattern creation</li><li>Rule modification in real-time</li><li>Multiple axiom variations</li></ul><br><br><strong>Visualization Features</strong><br><ul><li>3D pattern rendering</li><li>Color and style customization</li><li>Pattern export capabilities</li><li>Interactive parameter adjustment</li></ul>",
+                url: "https://www.youtube.com/embed/Iaz1yLZLqOc"
             }
         };
 
