@@ -10,6 +10,7 @@
 <body>
     <header id="top-div">
         <nav class="nav-container">
+            <button class="nav-button" data-target="seeking-light">Highlights</button>
             <button class="nav-button" data-target="unreal-engine">Unreal Engine</button>
             <button class="nav-button" data-target="unity">Unity</button>
             <button class="nav-button" data-target="cmasmas">C/C++</button>
@@ -17,66 +18,116 @@
         </nav>
     </header>
 
-    <main class="body-container">
-        <h1 class="section-title">My Projects</h1>
-        
-        <div class="video-player-container">
-            <div class="video-player">
-                <!-- Aquí irá el iframe del video -->
-            </div>
-            <div class="video-description">
-                <h3>Project Title</h3>
-                <p>Project description goes here. This is a placeholder text that will be replaced with actual project information when a video is selected.</p>
-            </div>
+    <main>
+        <div class="body-container" id="seeking-light">
+            <h1 class="section-title">Seeking Light</h1>
         </div>
+        <div class="body-container" id="unreal-engine">
+            <h1 class="section-title">Unreal Engine Projects</h1>
+            
+            <div class="video-player-container">
+                <div class="video-player">
+                    <!-- Aquí irá el iframe del video -->
+                </div>
+                <div class="video-description">
+                    <h3>Project Title</h3>
+                    <p>Project description goes here.</p>
+                </div>
+            </div>
 
-        <div class="video-grid">
-            <div class="video-preview" data-video-id="1" onclick="openVideo(1)">
-                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 1 Preview">
-                <div class="preview-overlay">
-                    <h4>Project 1</h4>
+            <div class="video-grid">
+                <div class="video-preview" data-video-id="3" onclick="openVideo(3, 'unreal-engine')">
+                    <img src="https://img.youtube.com/vi/7wTJkRMwnQE/maxresdefault.jpg" alt="FRAGMENTS OF CHILD">
+                    <div class="preview-overlay">
+                        <h4>FRAGMENTS OF CHILD</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="video-preview" data-video-id="2" onclick="openVideo(2)">
-                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 2 Preview">
-                <div class="preview-overlay">
-                    <h4>Project 2</h4>
-                </div>
-            </div>
-            <div class="video-preview" data-video-id="3" onclick="openVideo(3)">
-                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 3 Preview">
-                <div class="preview-overlay">
-                    <h4>Project 3</h4>
-                </div>
-            </div>
-            <div class="video-preview" data-video-id="4" onclick="openVideo(4)">
-                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 4 Preview">
-                <div class="preview-overlay">
-                    <h4>Project 4</h4>
-                </div>
-            </div>
-            <div class="video-preview" data-video-id="5" onclick="openVideo(5)">
-                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 5 Preview">
-                <div class="preview-overlay">
-                    <h4>Project 5</h4>
-                </div>
-            </div>
-            <div class="video-preview" data-video-id="6" onclick="openVideo(6)">
-                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 6 Preview">
-                <div class="preview-overlay">
-                    <h4>Project 6</h4>
+                <div class="video-preview" data-video-id="2" onclick="openVideo(2, 'unreal-engine')">
+                    <img src="https://img.youtube.com/vi/7m3dR7h9Cwg/maxresdefault.jpg" alt="Rescue Civil Game">
+                    <div class="preview-overlay">
+                        <h4>Rescue Civil Game</h4>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="body-container" id="unity">
+            <h1 class="section-title">Unity Projects</h1>
+            
+            <div class="video-player-container">
+                <div class="video-player">
+                    <!-- Aquí irá el iframe del video -->
+                </div>
+                <div class="video-description">
+                    <h3>Project Title</h3>
+                    <p>Project description goes here.</p>
+                </div>
+            </div>
 
+            <div class="video-grid">
+                <div class="video-preview" data-video-id="3" onclick="openVideo(4, 'unity')">
+                    <img src="https://img.youtube.com/vi/P2K3o3KeB0I/maxresdefault.jpg" alt="The last sunshine">
+                    <div class="preview-overlay">
+                        <h4>The last sunshine</h4>
+                    </div>
+                </div>
+                <div class="video-preview" data-video-id="3" onclick="openVideo(4.5, 'unity')">
+                    <img src="https://img.youtube.com/vi/_j3CCSOjF0c/maxresdefault.jpg" alt="The last sunshine">
+                    <div class="preview-overlay">
+                        <h4>The last sunshine</h4>
+                    </div>
+                </div>
+                <div class="video-preview" data-video-id="5" onclick="openVideo(5, 'unity')">
+                    <img src="https://img.youtube.com/vi/4gSycMcP4jg/hqdefault.jpg" alt="Cellular Automata">
+                    <div class="preview-overlay">
+                        <h4>Cellular Automata</h4>
+                    </div>
+                </div>
+                <div class="video-preview" data-video-id="6" onclick="openVideo(6, 'unity')">
+                    <img src="https://img.youtube.com/vi/itfYB5ELd48/maxresdefault.jpg" alt="Olympus">
+                    <div class="preview-overlay">
+                        <h4>Olympus</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-container" id="cmasmas">
+            <h1 class="section-title">C/C++ Projects</h1>
+            
+            <div class="video-player-container">
+                <div class="video-player">
+                    <!-- Aquí irá el iframe del video -->
+                </div>
+                <div class="video-description">
+                    <h3>Project Title</h3>
+                    <p>Project description goes here.</p>
+                </div>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-preview" data-video-id="5" onclick="openVideo(5, 'cmasmas')">
+                    <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 5 Preview">
+                    <div class="preview-overlay">
+                        <h4>Project 5</h4>
+                    </div>
+                </div>
+                <div class="video-preview" data-video-id="6" onclick="openVideo(6, 'cmasmas')">
+                    <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Project 6 Preview">
+                    <div class="preview-overlay">
+                        <h4>Project 6</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="about-section" id="about-me">
             <h2 class="about-title">About Me</h2>
             <div class="about-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <p>My journey in game development began with a simple question: "How did they do that?" This curiosity was sparked while playing World of Warcraft, where I found myself captivated by the intricate boss battles, innovative mechanics, and strategic gameplay. This passion evolved to encompass Souls-like games and Metroidvanias, genres that exemplify masterful game design and technical execution.</p>
+
+                <p>As a developer, I approach games with an analytical mindset, constantly studying mechanics, NPC behaviors, and narrative delivery. I have a particular interest in procedural generation, as it creates dynamic and engaging gameplay experiences through algorithmic design. My technical expertise extends to tool development and shader programming, where I combine mathematical principles with creative solutions.</p>
+
+                <p>My gaming background is deeply rooted in classic PlayStation titles like Crash Bandicoot and Spyro, which laid the foundation for my appreciation of game design. This evolved through experiences with iconic series such as Ratchet & Clank, Jak & Daxter, and modern masterpieces like Dark Souls. Each game has contributed to my understanding of what makes interactive entertainment compelling.</p>
+
+                <p>Beyond game development, I maintain a diverse set of interests including cinema, manga/anime, sports, and literature. These varied pursuits inform my creative process and help me approach challenges from multiple perspectives. I thrive on continuous learning and am always seeking new opportunities to expand my skills and knowledge.</p>
             </div>
         </div>
     </main>
@@ -85,10 +136,10 @@
         <div class="footer-content">
             <div class="contact-info">
                 <p><i class="fas fa-envelope"></i> programcocodev@gmail.com</p>
-                <p><i class="fas fa-phone"></i> +34 123 456 789</p>
+                <p><i class="fas fa-phone"></i> +34 685790595</p>
             </div>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" class="social-icon">
+                <a href="https://www.linkedin.com/in/carlos-soria-labrandero-a95042117/" target="_blank" rel="noopener noreferrer" class="social-icon">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </div>
@@ -99,7 +150,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="./scripts/scripts.js"></script>
     <script>
         // Script para generar estrellas dinámicamente
         function createStars() {
@@ -122,42 +173,65 @@
             1: {
                 title: "Seeking Light - Gameplay Trailer",
                 description: "Official gameplay trailer for Seeking Light, showcasing the main features and gameplay mechanics.",
-                url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                references: [
+                    {
+                        text: "Steam Page",
+                        url: "https://store.steampowered.com/app/1986790/Seeking_Light/"
+                    },
+                    {
+                        text: "GDWC 2022 Winner",
+                        url: "https://thegdwc.com/"
+                    }
+                ]
             },
             2: {
-                title: "Unreal Engine Project",
-                description: "A showcase of my work with Unreal Engine, including level design and gameplay mechanics.",
-                url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title: "Rescue Civil Game",
+                description: "Mini-game based on Counter Strike maps where you had to rescue civilians to win the game. The AI of the NPCs is built using behaviour trees and Unreal Engine perception systems. They can adopt different behaviours depending on the variables, and the actions they have are patrolling, running, fleeing, shooting, chasing you. The game ends when you have brought all the civilians to the safe zone or when you are killed. ",
+                url: "https://www.youtube.com/embed/7m3dR7h9Cwg"
+  
             },
             3: {
-                title: "Unity Development",
-                description: "Collection of Unity projects demonstrating various game mechanics and systems.",
-                url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title: "FRAGMENTS OF CHILD",
+                description: "Collaboration with Creek Games on a hack and slash platformer featuring unique art style and engaging puzzles. Led the AI system redesign, moving away from Unreal Engine's Behavior Trees to a more dynamic and adaptable model. The new AI system provides enhanced enemy behavior variation based on combat situations and environmental factors.",
+                url: "https://www.youtube.com/embed/7wTJkRMwnQE",
+                references: [
+                    {
+                        text: "LinkedIn CreekGames",
+                        url: "https://www.linkedin.com/company/creekgames/?originalSubdomain=es"
+                    }
+                ]
             },
             4: {
-                title: "C++ Game Development",
-                description: "Examples of game development using C++ and custom game engines.",
-                url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title: "The last sunshine",
+                description: "My debut Unity project (2018): A 2.5D platformer inspired by classic games like Mario and Sonic. Core mechanics focus on precise jumping and enemy combat. The boss battle system features a unique mana-based combat loop requiring strategic timing and pattern recognition.",
+                url: "https://www.youtube.com/embed/P2K3o3KeB0I"
+            },
+            4.5: {
+                title: "The last sunshine",
+                description: "Extended gameplay showcase of the 2.5D platformer. Features dynamic boss encounters with a three-phase combat system, where players must manage enemy mana depletion and execute precise counter-attacks.",
+                url: "https://www.youtube.com/embed/_j3CCSOjF0c"
             },
             5: {
-                title: "Game Design Process",
-                description: "Documentation of my game design process from concept to implementation.",
-                url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title: "Cellular Automata",
+                description: "Implementation of the Cellular Automata algorithm in Unity for procedural dungeon generation. The system creates unique cave layouts and spawns interactive elements at strategic points. Players navigate these procedurally generated environments while managing combat with various enemy types including slimes and bats.",
+                url: "https://www.youtube.com/embed/4gSycMcP4jg"
             },
             6: {
-                title: "Portfolio Overview",
-                description: "A comprehensive overview of my game development portfolio and skills.",
-                url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title: "Olympus",
+                description: "Mobile game published on Google Play, developed in collaboration with Ivan Ivanov Mandev and Alvaro Soriano. A roguelike action game where players descend through Mount Olympus, battling enemies and collecting upgrades.<br><br><strong>Key Features</strong><ul><li>Procedural level and enemy generation</li><li>Infinite progression system</li><li>Unity Ads integration</li><li>Responsive controls</li><li>Fast-paced combat</li></ul><br><strong>Core Mechanics</strong><ul><li>Precise jump physics with acceleration</li><li>Quick Time Event combat system</li><li>Defensive shield mechanics</li><li>Resource management</li></ul>",
+                url: "https://www.youtube.com/embed/itfYB5ELd48?si=Bs_XRhS0JXeU8XBm"
             }
         };
 
-        function openVideo(videoId) {
-            console.log('Opening video:', videoId);
+        function openVideo(videoId, sectionId) {
+            console.log('Opening video:', videoId, 'in section:', sectionId);
             
-            const videoPlayerContainer = document.querySelector('.video-player-container');
-            const videoGrid = document.querySelector('.video-grid');
-            const videoPlayer = document.querySelector('.video-player');
-            const videoDescription = document.querySelector('.video-description');
+            const container = document.getElementById(sectionId);
+            const videoPlayerContainer = container.querySelector('.video-player-container');
+            const videoGrid = container.querySelector('.video-grid');
+            const videoPlayer = container.querySelector('.video-player');
+            const videoDescription = container.querySelector('.video-description');
             
             const video = videoData[videoId];
             
@@ -165,7 +239,24 @@
                 // Primero actualizamos el contenido
                 videoPlayer.innerHTML = `<iframe width="100%" height="100%" src="${video.url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
                 videoDescription.querySelector('h3').textContent = video.title;
-                videoDescription.querySelector('p').textContent = video.description;
+                
+                // Construir el contenido de la descripción
+                let descriptionContent = `<p>${video.description}</p>`;
+                
+                // Añadir referencias si existen
+                if (video.references && video.references.length > 0) {
+                    descriptionContent += '<div class="video-references">';
+                    video.references.forEach(ref => {
+                        descriptionContent += `<a href="${ref.url}" target="_blank" rel="noopener noreferrer"><strong>${ref.text}</strong></a>`;
+                    });
+                    descriptionContent += '</div>';
+                }
+                
+                // Reemplazar todo el contenido de la descripción
+                videoDescription.innerHTML = `
+                    <h3>${video.title}</h3>
+                    ${descriptionContent}
+                `;
 
                 // Luego mostramos el contenedor y desplazamos la grilla
                 videoPlayerContainer.style.display = 'grid';
@@ -176,30 +267,33 @@
             }
         }
 
-        // Añadir botón para cerrar el reproductor
+        // Añadir botones para cerrar los reproductores
         document.addEventListener('DOMContentLoaded', function() {
-            const closeButton = document.createElement('button');
-            closeButton.className = 'close-button';
-            closeButton.innerHTML = '×';
-            document.querySelector('.video-player-container').appendChild(closeButton);
+            // Añadir botón de cierre a cada contenedor
+            document.querySelectorAll('.video-player-container').forEach(container => {
+                const closeButton = document.createElement('button');
+                closeButton.className = 'close-button';
+                closeButton.innerHTML = '×';
+                container.appendChild(closeButton);
 
-            closeButton.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const videoPlayerContainer = document.querySelector('.video-player-container');
-                const videoGrid = document.querySelector('.video-grid');
-                const videoPlayer = document.querySelector('.video-player');
-                
-                // Primero quitamos la clase active para iniciar la transición
-                videoPlayerContainer.classList.remove('active');
-                
-                // Esperamos a que termine la transición antes de ocultar el elemento
-                videoPlayerContainer.addEventListener('transitionend', function handler() {
-                    videoPlayerContainer.style.display = 'none';
-                    videoPlayerContainer.removeEventListener('transitionend', handler);
+                closeButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const videoPlayerContainer = this.parentElement;
+                    const videoGrid = videoPlayerContainer.parentElement.querySelector('.video-grid');
+                    const videoPlayer = videoPlayerContainer.querySelector('.video-player');
+                    
+                    // Primero quitamos la clase active para iniciar la transición
+                    videoPlayerContainer.classList.remove('active');
+                    
+                    // Esperamos a que termine la transición antes de ocultar el elemento
+                    videoPlayerContainer.addEventListener('transitionend', function handler() {
+                        videoPlayerContainer.style.display = 'none';
+                        videoPlayerContainer.removeEventListener('transitionend', handler);
+                    });
+                    
+                    videoGrid.classList.remove('shifted');
+                    videoPlayer.innerHTML = '';
                 });
-                
-                videoGrid.classList.remove('shifted');
-                videoPlayer.innerHTML = '';
             });
 
             // Agregar scroll suave a los botones de navegación

@@ -91,6 +91,41 @@
   }
 }
 
+.body-container {
+    padding: 2rem;
+    width: 70vw;
+    max-width: 90vw;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    box-sizing: border-box;
+
+    &:first-of-type {
+        margin-top: 6rem;
+    }
+
+    @include responsive('medium') {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        width: 80vw;
+
+        &:first-of-type {
+            margin-top: 5rem;
+        }
+    }
+
+    @include responsive('small') {
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        width: 98vw;
+
+        &:first-of-type {
+            margin-top: 4rem;
+        }
+    }
+}
+
 @include responsive(mobile) {
   .container-0 {
     padding-top: 30%;
