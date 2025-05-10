@@ -28,13 +28,13 @@
 }
 
 @mixin responsive($breakpoint) {
-  @if $breakpoint == mobile {
+  @if $breakpoint == 'small' {
     @media (max-width: $breakpoint-mobile) { @content; }
   }
-  @if $breakpoint == tablet {
+  @if $breakpoint == 'medium' {
     @media (max-width: $breakpoint-tablet) { @content; }
   }
-  @if $breakpoint == desktop {
+  @if $breakpoint == 'large' {
     @media (max-width: $breakpoint-desktop) { @content; }
   }
 }
