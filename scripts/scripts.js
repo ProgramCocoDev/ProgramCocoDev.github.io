@@ -13,9 +13,9 @@ for (let i = 0; i < 1000; i++) {
 function downloadCV() {
   // Crear un enlace temporal
   const link = document.createElement("a");
-  link.href = "./utils/cv/cv-carlos-soria-eng.pdf"; // Cambia la ruta al archivo que deseas descargar
+  link.href = "./utils/cv/carlos_soria_en_cv.pdf"; // Cambia la ruta al archivo que deseas descargar
   link.target = "_blank";
-  link.download = "cv-carlos-soria.pdf"; // Cambia el nombre del archivo descargado
+  link.download = "carlos_soria_cv.pdf"; // Cambia el nombre del archivo descargado
 
   // Simular un clic en el enlace
   link.click();
