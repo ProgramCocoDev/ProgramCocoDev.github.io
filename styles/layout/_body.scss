@@ -3,7 +3,137 @@
 @use "sass:color";
 
 $header-height: 80px;
+/* Seeking Light Highlight Section */
+.highlight-content {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  @include responsive('medium') {
+    padding: 1rem;
+		font-size: $font-size-small;
+  }
 
+}
+
+.highlight-header {
+  margin-bottom: 2rem;
+}
+
+.highlight-badges {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  @include responsive('medium') {
+    justify-content: center;
+  }
+}
+
+.highlight-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.highlight-badge:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.highlight-badge i {
+  margin-right: 0.5rem;
+}
+
+.highlight-description {
+  color: #fff;
+  line-height: 1.6;
+}
+
+.highlight-description p {
+  margin-bottom: 1.5rem;
+}
+
+.highlight-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  @include responsive('medium') {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.feature-section h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.feature-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-section ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.feature-section ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #fff;
+}
+
+.video-showcase {
+  width: 100%;
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @include responsive("medium") {
+    grid-template-columns: 1fr;
+  }
+}
+
+.video-container {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 10px;
+
+  @include responsive("medium") {
+    height: 400px;
+  }
+  @include responsive("small") {
+    height: 300px;
+  }
+}
 .section-title {
     color: $text-color;
     font-family: $font-family-base;
